@@ -122,7 +122,8 @@ export default function Tile({
               onSubmit={(event) => {
                 event.stopPropagation();
                 event.preventDefault();
-                if (value.toLowerCase() === answer.toLowerCase()) {
+
+                if (btoa(value.toUpperCase()) === answer) {
                   setRevealed(true);
                   setZoom(false);
                   setAnswers(title, answer);
@@ -162,7 +163,6 @@ export default function Tile({
               style={zoomedStyle}
               onClick={(event) => {
                 event.stopPropagation();
-                console.info("prout");
                 setZoom(false);
               }}
             >

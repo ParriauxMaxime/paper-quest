@@ -34,7 +34,8 @@ function App() {
   const lastRow = cells[cells.length - 1];
   const [surprise, setSurprise] = useState(false);
   const [superHot, setSuperHot] = useState(false);
-  const gameOver = document.location.search === "?q=iloveyouforever";
+  const gameOver =
+    btoa(document.location.search) === "P3E9aWxvdmV5b3Vmb3JldmVy";
   const interval = useRef<NodeJS.Timer>();
 
   const isMobile = useMemo(
@@ -135,7 +136,7 @@ function App() {
     <div className="left-0 top-0 h-full w-full z-10 flex flex-col justify-center items-center bg-primary-300">
       <h1 className="text-3xl mt-2 pb-8">Paper Quest</h1>
       <div
-        className="p-2 md:p-4 lg:p-8 w-[100vw] h-[100vw] md:h-[100vh] md:w-[100vh] grid grid-cols-[1rem_repeat(8,_minmax(0,_1fr))_0.25fr] grid-rows-[1rem_repeat(8,_minmax(0,_1fr))_0.25fr] bg-primary-100"
+        className="p-2 w-[100vw] h-[100vw] md:h-[100vh] md:w-[100vh] grid grid-cols-[1rem_repeat(8,_minmax(0,_1fr))_0.25fr] grid-rows-[1rem_repeat(8,_minmax(0,_1fr))_0.25fr] bg-primary-100"
         style={{
           ...(gap
             ? {
