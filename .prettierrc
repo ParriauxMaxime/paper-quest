@@ -1,0 +1,7 @@
+{
+  "printWidth": 80,
+  "semi": true,
+  "importOrder": ["^react", "^[a-z]", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
